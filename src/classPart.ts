@@ -82,4 +82,5 @@ let department: Department; // ok to create a reference to an abstract type
 department = new AccountingDepartment(); // ok to create and assign a non-abstract subclass
 department.printName();
 department.printMeeting();
+
 // department.generateReports(); // error: method doesn't exist on declared abstract type
