@@ -19,7 +19,9 @@ let myGenericNumber = new GenericNumber<number>();
 myGenericNumber.zeroValue = 0;
 myGenericNumber.add = function(x, y) { return x + y; };
 
-console.log(myGenericNumber.add(2,3));
+let res = myGenericNumber.add(2,3);
+
+console.log(res);
 
 
 
