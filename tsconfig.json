@@ -1,12 +1,9 @@
 {
-    "files": [
-        "src/main.ts"
-    ],
     "compilerOptions": {
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "target": "es5",
         "allowJs": true,
-        "module": "es6",
+        "module": "commonjs",
         "outDir": "dist"
     },
     "exclude": [
