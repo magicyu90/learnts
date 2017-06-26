@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon dist/nodePart/server.js"
+  },
   "author": "Hugo",
   "license": "ISC",
   "dependencies": {
     "http": "^0.0.0"
   },
   "devDependencies": {
-    "@types/node": "^8.0.2"
+    "@types/node": "^8.0.2",
+    "nodemon": "^1.11.0"
   }
 }
