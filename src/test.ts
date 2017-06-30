@@ -30,29 +30,34 @@ let result = trainArray.reduce((prev, cur) => {
     prev[cur.date] = [];
     prev[cur.date].push(cur);
     return prev;
-}, []);
+}, {});
 
 // console.log(result);
-
-let result2 = [].reduce((prev, cur, index, arr) => {
-    // if (exerciseArray[index] === undefined) {
-    //     cur.value.push({ id: 0, name: null, value: null, Children: null, date: cur.key })
-    // }
-    // else {
-    //     cur.value.push(exerciseArray[index]);
-    // }
-    return prev;
-}, result);
-
-console.log(result2);
-
-// result = result.reduce((prev, cur, index) => {
-//     if (gradeArray[index] !== undefined) {
-//         prev[cur.key].push(gradeArray[index]);
-//     } else {
-//         prev[cur.key].push({ id: 0, name: null, value: null, Children: null, date: cur.date })
-//     }
-//     return prev;
-// }, result);
+Object.keys(result).forEach(function (key, index) {
+    // do something with obj[key]
+    if (gradeArray[index] === undefined) {
+        result[key].push({ id: 0, name: null, value: null, Children: null, date: key });
+    }
+    else {
+        result[key].push(gradeArray[index]);
+    }
+});
 
 // console.log(result);
+Object.keys(result).forEach(function (key, index) {
+    // do something with obj[key]
+    if (exerciseArray[index] === undefined) {
+        result[key].push({ id: 0, name: null, value: null, Children: null, date: key });
+    }
+    else {
+        result[key].push(exerciseArray[index]);
+    }
+});
+
+console.log(result);
+
+var arr = [1, 2, 3]
+
+var pro = arr.reduce(function (pre, cur, index, arr) { return pre * cur })
+
+console.log('pro:' + pro);
